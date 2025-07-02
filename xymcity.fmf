@@ -12,5 +12,5 @@ bind mouse3 +forward
 bind mwheelup impulse 10
 bind mwheelup impulse 12
 
-package id1/pak0.pak - "/id1/pak0.pak"
+package id1/pak0.pak - "id1/pak0.pak"
 package xymcity/xymcity.pk3 - "xymcity/xymcity.pk3"
