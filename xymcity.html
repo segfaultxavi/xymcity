@@ -27,10 +27,9 @@ var Module = {
 	files:
 	{	//these can be arraybuffers(you'll need a helper to define those) or promises(fte will block till they complete), or strings (which will be interpretted as urls and downloaded before any C code is run)
 		//note that the code below will skip the file-drop prompt if there's any files specified here (or there's a #foo.fmf file specified)
-//		"default.fmf": "default.fmf",
-//		"id1/pak0.pak": "pak0.pak",
-
-	    "xymcity.fmf":"xymcity.fmf"
+		"id1/pak0.pak": "id1/pak0.pak",
+		"xymcity/xymcity.pk3": "xymcity/xymcity.pk3",
+		"default.fmf": "default.fmf"
 	},
 	print: function(msg)
 	{	//stdout...
