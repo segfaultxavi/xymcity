@@ -1,6 +1,5 @@
 name "XYM City"
 
-basegame id1
 basegame xymcity
 
 bind w +forward
@@ -14,4 +13,4 @@ bind mwheelup impulse 12
 
 gamedir xymcity
 game xymcity
-alias f_startup map xymcity
+alias f_startup "exec autoexec.cfg"

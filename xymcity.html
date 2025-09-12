@@ -18,7 +18,7 @@
 	<div id="dropzone" ondrop="gotdrop(event);" ondragover="event.preventDefault()" hidden=1>Drop Zone</div>
 	<button type="button" onclick="begin()" id="begin" hidden=1>Click To Begin!</button>
 	<div class="emscripten">
-		<progress value="0" max="100" id="progress" hidden=1></progress>  
+		<progress value="0" max="100" id="progress" hidden=1></progress>
 	</div>
 	<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" hidden=1></canvas>
 	<script type='text/javascript'>
@@ -27,7 +27,6 @@ var Module = {
 	files:
 	{	//these can be arraybuffers(you'll need a helper to define those) or promises(fte will block till they complete), or strings (which will be interpretted as urls and downloaded before any C code is run)
 		//note that the code below will skip the file-drop prompt if there's any files specified here (or there's a #foo.fmf file specified)
-		"id1/pak0.pak": "id1/pak0.pak",
 		"xymcity/xymcity.pk3": "xymcity/xymcity.pk3",
 		"default.fmf": "default.fmf"
 	},
@@ -163,7 +162,7 @@ function scanfiles(item,path)
 	}
 }
 function gotdrop(ev)
-{	//user drag+dropped something. 
+{	//user drag+dropped something.
 	ev.preventDefault();
 	for (var i = 0; i < ev.dataTransfer.items.length; i++)
 		if (ev.dataTransfer.items[i].webkitGetAsEntry)
@@ -182,9 +181,9 @@ function gotdrop(ev)
 	showfiles();
 }
 if (window.location.hash != "" || Object.keys(Module.files).length)
-	begin();		//if the url has a #foo.fmf then just begin instantly, 
+	begin();		//if the url has a #foo.fmf then just begin instantly,
 else
 	showfiles();	//otherwise show our lame file dropper and wait for the user to click 'go'.
-    </script>      
+    </script>
   </body>
 </html>
